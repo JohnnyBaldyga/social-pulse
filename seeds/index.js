@@ -1,10 +1,10 @@
 const sequelize = require('../config/connection');
 //change project to event 
-const { User, Project } = require('../models');
+const { User, Event } = require('../models');
 
 // add event and create user data json in seed folder
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const eventData = require('./eventData.json');
 //change event iteration from project 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -14,9 +14,9 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
+  for (const event of eventData) {
+    await Event.create({
+      ...event,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
