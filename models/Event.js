@@ -33,6 +33,11 @@ Event.init(
         allowNull: false,
       },
 
+    attendees: {
+      type: DataTypes.NUMBER,
+      defaultValue: 0,
+    },
+
     user_id: {
         type: DataTypes.INTEGER,
         references: {
