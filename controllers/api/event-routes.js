@@ -1,7 +1,7 @@
 // Dependencies
 const router = require("express").Router();
-const { Event, User } = require("../models");
-const withAuth = require("../utils/auth");
+const { Event, User } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 // GET all
 router.get("/", withAuth, async (req, res) => {
