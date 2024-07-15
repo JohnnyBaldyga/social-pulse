@@ -65,7 +65,29 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 // Update event
+router.put("/:id", withAuth, async (req, res) => {
+  try {
+    const event = await Event.findByPk(req.params.id);
 
+    if (!event) {
+      res.status(404).json({ message: "Event not found" });
+      return;
+    }
+
+    if (event.user_id !== req.session.user_id) {
+      res
+        .status(403)
+        .json({ message: "You are not authorized to update this event" });
+      return;
+    }
+
+    const updatedEvent = await event.update(req.body);
+
+    res.status(200).json(updatedEvent);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 // Delete event
 router.delete("/:id", withAuth, async (req, res) => {
   try {
@@ -81,7 +103,7 @@ router.delete("/:id", withAuth, async (req, res) => {
       return;
     }
 
-    res.status(200).json(projectData);
+    res.status(200).json(eventData);
   } catch (err) {
     res.status(500).json(err);
   }
