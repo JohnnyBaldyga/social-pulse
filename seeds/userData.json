@@ -1,0 +1,33 @@
+[
+   {
+    "name": "John Doe",
+    "email": "john.doe@gmail.com",
+    "password": "password123"
+  },
+  {
+    "name": "Jane Smith",
+    "email": "jane.smith@gmail.com",
+    "password": "password123"
+  },
+  {
+    "name": "James Bond",
+    "email": "james.bond@gmail.com",
+    "password": "password123"
+  },
+  {
+    "name": "Mary Poppins",
+    "email": "mary.pop@gmail.com",
+    "password": "password123"
+  },
+  {
+    "name": "Edna Mode",
+    "email": "edna.mode@gmail.com",
+    "password": "password123"
+  },
+  {
+    "name": "Optimus Prime",
+    "email": "optimus.prime@gmail.com",
+    "password": "password123"
+  }
+]
+
