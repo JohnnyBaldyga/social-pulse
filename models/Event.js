@@ -34,7 +34,7 @@ Event.init(
       },
 
     attendees: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       defaultValue: 0,
     },
 
