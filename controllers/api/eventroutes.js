@@ -10,7 +10,7 @@ router.get("/", withAuth, async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["name", "description", "event_date", "location"],
+          attributes: ["name"],
         },
       ],
     });
@@ -41,6 +41,10 @@ router.get("/event/:id", withAuth, async (req, res) => {
         },
       ],
     });
+    if (!eventData) {
+      res.status(404).json({ message: "Event not found" });
+      return;
+    }
     const event = eventData.get({ plain: true });
     res.render("event", {
       ...event,
@@ -108,8 +112,5 @@ router.delete("/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-// Login middleware to prevent access
-
-//
 
 module.exports = router;
