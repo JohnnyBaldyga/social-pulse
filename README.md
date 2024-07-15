@@ -17,5 +17,6 @@ The creation of Social Pulse is a collaborative effort by students in the Columb
 
 ## Deployment Link:
 
+https://social-pulse-x72y.onrender.com
 
 ## Credits
