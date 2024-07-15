@@ -10,19 +10,25 @@
     "password": "password123"
   },
   {
-    "name": "Alice Johnson",
-    "email": "alice.johnson@gmail.com",
+    "name": "James Bond",
+    "email": "james.bond@gmail.com",
     "password": "password123"
   },
   {
-    "name": "Bob Williams",
-    "email": "bob.williams@gmail.com",
+    "name": "Mary Poppins",
+    "email": "mary.pop@gmail.com",
     "password": "password123"
   },
   {
-    "name": "Emily Davis",
-    "email": "emily.davis@gmail.com",
+    "name": "Edna Mode",
+    "email": "edna.mode@gmail.com",
+    "password": "password123"
+  },
+  {
+    "name": "Optimus Prime",
+    "email": "optimus.prime@gmail.com",
     "password": "password123"
   }
+
 ]
 
