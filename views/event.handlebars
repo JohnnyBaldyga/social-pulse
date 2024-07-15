@@ -7,26 +7,65 @@
 <div class="row mt-4">
   <div class="col-md-6">
     <h2> Search for an event</h2>
-     
-      <form class="form search-event-form">
+
+    <form class="form search-event-form">
       <div class="form-group">
         <label for="event-name">event name:</label>
-        <input class="form-input" type="text" id="event-name" name="event-name" />
+        <input
+          class="form-input"
+          type="text"
+          id="event-name"
+          name="event-name"
+        />
       </div>
       <div class="form-group">
         <label for="event-date">event date:</label>
-        <input class="form-input" type="date" id="event-date" name="event-date" />
+        <input
+          class="form-input"
+          type="date"
+          id="event-date"
+          name="event-date"
+        />
       </div>
       <div class="form-group">
         <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+        <textarea
+          class="form-input"
+          id="project-desc"
+          name="project-desc"
+        ></textarea>
       </div>
       <div class="form-group">
         <label for="event-location">location:</label>
-        <textarea class="form-input" id="event-location" name="event-location"></textarea>
+        <textarea
+          class="form-input"
+          id="event-location"
+          name="event-location"
+        ></textarea>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Search</button>
       </div>
     </form>
   </div>
+
+  {{#if events.length}}
+    <div class="col-md-6 project-list">
+      <h3>Current Events:</h3>
+
+      {{#each events as |event|}}
+        <div class="row mb-2">
+          <div class="col-md-8">
+            <h4><a href="/event/{{event.id}}">{{event.name}}</a></h4>
+          </div>
+          <div class="col-md-4">
+            <button
+              class="btn btn-sm btn-danger"
+              data-id="{{event.id}}"
+            >DELETE</button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
