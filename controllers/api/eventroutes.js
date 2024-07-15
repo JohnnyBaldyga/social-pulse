@@ -4,7 +4,7 @@ const { Event, User } = require("../models");
 const withAuth = require("../utils/auth");
 
 // GET all
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const eventData = await Event.findAll({
       include: [
@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
 });
 
 // GET event by id
-router.get("/event/:id", async (req, res) => {
+router.get("/event/:id", withAuth, async (req, res) => {
   try {
     const eventData = await Event.findByPk(req.params.id, {
       include: [
@@ -52,7 +52,18 @@ router.get("/event/:id", async (req, res) => {
 });
 
 // POST event
+router.post("/", withAuth, async (req, res) => {
+  try {
+    const newEvent = await Event.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
 
+    res.status(200).json(newEvent);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 // Update event
 
 // Delete event
@@ -60,3 +71,5 @@ router.get("/event/:id", async (req, res) => {
 // Login middleware to prevent access
 
 //
+
+module.exports = router;
