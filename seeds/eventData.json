@@ -5,5 +5,62 @@
     "event_date": "09/01/2024",
     "date_created": "",
     "location": "New York"
+  },
+  {
+    "name": "Summer Music Festival",
+    "description": "Join us for a day of incredible live music featuring some of the hottest bands and artists. Enjoy a variety of genres and an unforgettable festival atmosphere.",
+    "event_date": "09/01/2024",
+    "date_created": "07/15/2024",
+    "location": "New York"
+  },
+  {
+    "name": "Art & Craft Fair",
+    "description": "Explore a diverse collection of handmade arts and crafts from local and international artists. Find unique gifts and enjoy live demonstrations and workshops.",
+    "event_date": "09/10/2024",
+    "date_created": "07/15/2024",
+    "location": "New York"
+  },
+  {
+    "name": "Food & Wine Expo",
+    "description": "Indulge in a culinary adventure at the Food & Wine Expo. Sample gourmet dishes, fine wines, and attend cooking demonstrations by renowned chefs.",
+    "event_date": "09/15/2024",
+    "date_created": "07/15/2024",
+    "location": "New York"
+  },
+  {
+    "name": "Tech Innovation Summit",
+    "description": "Discover the latest advancements in technology at the Tech Innovation Summit. Attend keynotes, panel discussions, and hands-on workshops with industry leaders.",
+    "event_date": "09/20/2024",
+    "date_created": "07/15/2024",
+    "location": "New York"
+  },
+  {
+    "name": "Film Festival",
+    "description": "Experience the magic of cinema at the Film Festival. Watch screenings of independent and blockbuster films, and participate in Q&A sessions with filmmakers.",
+    "event_date": "09/25/2024",
+    "date_created": "07/15/2024",
+    "location": "New York"
+  },
+  {
+    "name": "Wellness Retreat",
+    "description": "Rejuvenate your mind and body at our Wellness Retreat. Enjoy yoga sessions, meditation workshops, and wellness talks in a serene environment.",
+    "event_date": "10/01/2024",
+    "date_created": "07/15/2024",
+    "location": "New York"
+  },
+  {
+    "name": "Literary Festival",
+    "description": "Celebrate the world of literature at the Literary Festival. Meet your favorite authors, attend book readings, and participate in literary discussions and workshops.",
+    "event_date": "10/05/2024",
+    "date_created": "07/15/2024",
+    "location": "New York"
+  },
+  {
+    "name": "Winter Wonderland",
+    "description": "Experience the magic of winter at the Winter Wonderland event. Enjoy ice skating, festive markets, and holiday-themed activities for all ages.",
+    "event_date": "12/01/2024",
+    "date_created": "07/15/2024",
+    "location": "New York"
   }
+
 ]
