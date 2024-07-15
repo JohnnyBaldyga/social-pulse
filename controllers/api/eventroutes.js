@@ -67,7 +67,25 @@ router.post("/", withAuth, async (req, res) => {
 // Update event
 
 // Delete event
+router.delete("/:id", withAuth, async (req, res) => {
+  try {
+    const eventData = await Event.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
 
+    if (!eventData) {
+      res.status(404).json({ message: "No event found" });
+      return;
+    }
+
+    res.status(200).json(projectData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 // Login middleware to prevent access
 
 //
