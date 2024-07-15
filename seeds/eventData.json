@@ -1,20 +1,9 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
+    "name": "Up Coming Sports Events",
+    "description": "Discover the excitement and thrill of live sports events with our comprehensive list of upcoming games, tournaments, and competitions. Whether you're a fan of high-energy action or strategic play, there's something for everyone.",
     "event_date": "09/01/2024",
+    "date_created": "",
     "location": "New York"
-  },
-  {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "event_date": 10000,
-    "location": "Philadelphia"
-  },
-  {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "event_date": 800,
-    "location": "New Jersey"
   }
 ]
