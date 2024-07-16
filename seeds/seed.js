@@ -17,7 +17,8 @@ const seedDatabase = async () => {
   for (const event of eventData) {
     await Event.create({
       ...event,
-      
+      event_date: new Date(event.event_date),
+      date_created: event.date_created ? new Date(event.date_created) : new Date(),
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
