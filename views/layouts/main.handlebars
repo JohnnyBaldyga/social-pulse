@@ -26,12 +26,7 @@
       {{/if}}
     </nav>
     <main>
-        {{#if loggedIn}}
-            {{> user}}
-            {{> eventpage}}
-        {{else}}
-            {{> login}}
-        {{/if}}
+       
         {{{body}}}
     </main>
     {{#if loggedIn}}
