@@ -1,0 +1,47 @@
+/* Global Stylings */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* Root Colors */
+
+:root {
+    --primary: #a2d49f; 
+    --secondary: #f26247;
+    --background: #ffeeb0;
+    --light-text: #ffeeb0;
+    --dark-text: #e72042;
+}
+
+
+/* Font Styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--dark-text);
+    font-weight: 500;
+}
+
+body {
+    background-color: var(--background);
+    font-size: 1.75rem;
+}
+
+header {
+background-color: var(--primary);
+color: var(--dark-text)
+}
+
+footer {
+ background-color: var(--secondary);
+ color: var(--light-text);
+}
