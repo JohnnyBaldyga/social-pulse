@@ -1,1 +1,29 @@
-<h1>I"m an avent</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Page</title>
+    <link rel="stylesheet" href="public/css/event.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Social Pulse</h1>
+    </header>
+    <nav>
+      <a href="/">Home</a>
+      {{#if loggedIn}}
+        <button id="logout" class="btn-no-style">Logout</button>
+      {{else}}
+        <a href="/login">Login</a>
+      {{/if}}
+    </nav>
+    <main>
+      <div class="card post-card">
+        <div class="post"></div>
+      </div>
+      <div class="card search-card">
+        <div class="search"></div>
+      </div>
+    </main>
+  </body>
+</html>
