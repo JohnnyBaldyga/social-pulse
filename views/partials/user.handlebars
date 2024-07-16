@@ -9,9 +9,13 @@
         <ul>
             {{#each events}}
             <li>
-                
+                <a href="/event/{{id}}">{{name}}</a>
+                <p>{{description}}</p>
+                <p>{{formatDate event_date}}</p>
             </li>
+            {{/each}}
         </ul>
-
-
+    {{else}}
+    <p>You have no upcoming events</p>
+    {{/if}}
 </div>
