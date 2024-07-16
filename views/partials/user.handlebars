@@ -1,2 +1,21 @@
-<!DOCTYPE html>
-</html>
+<div class="user profile">
+    <h2>User Profile</h2>
+    {{!-- user profile information starter --}}
+    <p><strong>Name:</strong>{{name}}</p>
+    <p><strong>Email:</strong> {{email}}</p>
+   
+    <h3>Your Events</h3>
+    {{#if events.length}}
+        <ul>
+            {{#each events}}
+            <li>
+                <a href="/event/{{id}}">{{name}}</a>
+                <p>{{description}}</p>
+                <p>{{formatDate event_date}}</p>
+            </li>
+            {{/each}}
+        </ul>
+    {{else}}
+    <p>You have no upcoming events</p>
+    {{/if}}
+</div>
