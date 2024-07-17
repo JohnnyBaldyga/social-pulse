@@ -111,6 +111,7 @@ nav {
 
 #homepage-title {
     color: var(--dark-text);
+    text-align: center;
 }
 
 li {
