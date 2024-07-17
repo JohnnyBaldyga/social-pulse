@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/");
+    res.redirect("/login");
     return;
   }
 
@@ -35,18 +35,18 @@ router.get("/events", async (req, res) => {
     res.redirect("/login");
     return;
   }
-    try {
-      const eventData = await Event.findAll();
-      const events = eventData.map((event) => event.get({ plain: true }));
+  try {
+    const eventData = await Event.findAll();
+    const events = eventData.map((event) => event.get({ plain: true }));
 
-      res.render("eventpage", {
-        events,
-        logged_in: req.session.logged_in,
-      });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
+    res.render("eventpage", {
+      events,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
