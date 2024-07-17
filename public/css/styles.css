@@ -109,3 +109,10 @@ nav {
     margin-right: 20px;
 }
 
+#homepage-title {
+    color: var(--dark-text);
+}
+
+li {
+    font-family: sans-serif;
+}
