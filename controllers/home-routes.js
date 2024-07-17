@@ -34,6 +34,13 @@ router.get('/login', (req, res) => {
       res.redirect('/login');
       return;
     }
+    else try {
+      const eventData = await Event.findAll();
+      const events = eventData.map((event) => event.get({ plain: true }));
+
+      res.render('eventpage', {
+      })
+    }
   })
   
   module.exports = router;
