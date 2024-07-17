@@ -3,16 +3,17 @@ const { User } = require("../../models");
 
 // POST Sign Up
 router.post("/signup", async (req, res) => {
-  const { username, email, password } = req.body;
+  const { name, email, password } = req.body;
   try {
     const newUser = await User.create({
-      username,
+      name,
       email,
       password,
     });
 
     res.status(201).json({ message: "User created!", user: newUser });
   } catch (error) {
+    console.error(error);
     res.status(400).json({ error: error.message });
   }
 });

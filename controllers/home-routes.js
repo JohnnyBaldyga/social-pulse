@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { User } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ["password"] },
@@ -20,13 +20,31 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
-    if (req.session.logged_in) {
-      res.redirect('/');
-      return;
+router.get("/login", (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("login-view");
+});
+
+router.get("/events", async (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  } else
+    try {
+      const eventData = await Event.findAll();
+      const events = eventData.map((event) => event.get({ plain: true }));
+
+      res.render("eventpage", {
+        events,
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      res.status(500).json(err);
     }
-  
-    res.render('login-view');
-  });
-  
-  module.exports = router;
+});
+
+module.exports = router;
