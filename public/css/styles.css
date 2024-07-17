@@ -117,3 +117,9 @@ nav {
 li {
     font-family: sans-serif;
 }
+
+.input {
+    background-color: var(--header);
+    width: 50%;
+color: var(--dark-text);
+}
