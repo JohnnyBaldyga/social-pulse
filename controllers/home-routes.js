@@ -28,5 +28,12 @@ router.get('/login', (req, res) => {
   
     res.render('login-view');
   });
+
+  router.get('/events', async(req, res) =>{
+    if (!req.session.logged_in) {
+      res.redirect('/login');
+      return;
+    }
+  })
   
   module.exports = router;
