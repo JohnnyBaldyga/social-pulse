@@ -6,4 +6,21 @@ const newFormHandler = async (event) => {
   const location = document.querySelector('#location').value.trim();
   const eventsList = document.querySelector('#event-list').value.trim();
 
- 
+  if (search && location && eventsList) {
+    const response = await fetch(`/api/event`, {
+      method: 'POST',
+      body: JSON.stringify({ search, location, eventsList }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/event');
+    } else {
+      alert('Failed to search event');
+    }
+  }
+};
+
+
