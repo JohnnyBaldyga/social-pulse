@@ -1,20 +1,23 @@
 /* Global Stylings */
-* {
+*{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 
 /* Root Colors */
 
 :root {
-  --header: #d1dbbd;
+  --header: #D1DBBD;
   --background: #ffffff;
-  --light-text: #d1dbbd;
-  --dark-text: #91aa9d;
-  --button: #91aa9d;
+  --light-text: #D1DBBD;
+  --dark-text: #91AA9D;
+  --button: #91AA9D;
+
 }
+
 
 /* Font Styles */
 
@@ -24,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: var(--dark-text);
   font-weight: 500;
 }
@@ -32,38 +35,85 @@ h6 {
 body {
   background-color: var(--background);
   font-size: 1.75rem;
+  color: var(--dark-text);
 }
 
 header {
-  background-color: var(--header);
-  color: var(--dark-text);
-  padding: 20px;
+background-color: var(--header);
+color: var(--dark-text);
+padding: 20px;
+text-align: center;
 }
 
 footer {
-  background-color: var(--header);
-  color: var(--dark-text);
+background-color: var(--header);
+color: var(--dark-text);
 }
 
 .buttons {
-  background-color: var(--button);
-  color: var(--light-text);
-  border: none;
-  border-radius: 6px;
-  margin: 20px;
-  margin-bottom: 60px;
+background-color: var(--button) ;
+color: var(--light-text);
+border: none;
+border-radius: 6px;
+margin: 20px;
+margin-bottom: 60px;
 }
 
 a:link {
-  color: var(--light-text);
+color: var(--light-text);
 }
 a:visited {
-  color: var(--dark-text);
+color: var(--dark-text);
+}
+
+
+/* #header-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+} */
+
+p {
+  font-family: sans-serif;
+}
+
+#login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+#signup-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px; 
+}
+
+#login-label {
+text-align: center;
+}
+
+#signup-label {
+text-align: center;
 }
 
 nav {
-display: flex;
-justify-content: space-between;
-margin-left: 20px;
-margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#homepage-title {
+  color: var(--dark-text);
+  text-align: center;
+}
+
+li {
+  font-family: sans-serif;
 }
