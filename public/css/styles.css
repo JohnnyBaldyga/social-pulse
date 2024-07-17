@@ -35,11 +35,13 @@ h6 {
 body {
     background-color: var(--background);
     font-size: 1.75rem;
+    color: var(--dark-text);
 }
 
 header {
 background-color: var(--header);
-color: var(--dark-text)
+color: var(--dark-text);
+padding: 20px;
 }
 
 footer {
@@ -62,6 +64,7 @@ a:link {
 a:visited {
  color: var(--dark-text);
 }
+
 
 #header-container {
     display: flex;
@@ -104,3 +107,4 @@ nav {
     margin-left: 20px;
     margin-right: 20px;
 }
+
