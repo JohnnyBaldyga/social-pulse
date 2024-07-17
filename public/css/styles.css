@@ -70,3 +70,22 @@ a:visited {
     justify-content: center;
 }
 
+p {
+    font-family: sans-serif;
+}
+
+#login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+#signup-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px; 
+}
