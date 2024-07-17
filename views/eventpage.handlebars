@@ -21,6 +21,8 @@
         <p>Date: {{formatDate event_date}}</p>
         <p>Location: {{location}}</p>
       </li>
+    {{else}}
+      <p>No events found.</p>
     {{/each}}
   </ul>
 </div>
