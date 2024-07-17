@@ -1,32 +1,34 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Post a New Event:</h3>
-
-       <form class="form new-event-form">
-      <div class="form-group">
-        <label for="event-name">event name:</label>
-        <input class="form-input" type="text" id="event-name" name="event-name" />
+<section class="section">
+  <form id="post-event-form" class="form">
+    <div class="field">
+      <label class="label" for="name">Event Name</label>
+      <div class="control">
+        <input class="input" type="text" id="name" name="name" required>
       </div>
-      <div class="form-group">
-        <label for="event-date">event date:</label>
-        <input class="form-input" type="text" id="event-date" name="event-date" />
+    </div>
+    <div class="field">
+      <label class="label" for="description">Description</label>
+      <div class="control">
+        <textarea class="textarea" id="description" name="description" required></textarea>
       </div>
-      <div class="form-group">
-        <label for="event-desc">description:</label>
-        <textarea class="form-input" id="event-desc" name="event-desc"></textarea>
+    </div>
+    <div class="field">
+      <label class="label" for="event_date">Event Date</label>
+      <div class="control">
+        <input class="input" type="datetime-local" id="event_date" name="event_date" required>
       </div>
-      {{!-- <div class="form-group">
-        <label for="event-location">location:</label>
-        <textarea class="form-input" id="event-location" name="event-location"></textarea>
-      </div> --}}
-      <div class="form-group">
-        <button type="submit" class="buttons">Create</button>
+    </div>
+    <div class="field">
+      <label class="label" for="location">Location</label>
+      <div class="control">
+        <input class="input" type="text" id="location" name="location" required>
       </div>
-    </form>
-  </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <button class="button is-primary" type="submit">Post Event</button>
+      </div>
+    </div>
+  </form>
+</section>
+<script src="/public/js/event.js"></script>
