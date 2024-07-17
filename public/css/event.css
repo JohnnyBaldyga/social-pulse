@@ -76,6 +76,7 @@ color: var(--dark-text);
 
 p {
   font-family: sans-serif;
+  color: var(--dark-text);
 }
 
 #login-form {
@@ -116,4 +117,35 @@ nav {
 
 li {
   font-family: sans-serif;
+}
+
+.input {
+  margin-left: 20px;
+  background-color: var(--header);
+  width: 20%;
+color: var(--dark-text);
+}
+
+.textarea{
+  color: var(--dark-text);
+}
+
+#search-location {
+  margin-left:20px;
+}
+
+#location-title {
+  margin-left: 20px;
+}
+
+.events-list{
+  margin-left:20px;
+}
+
+#events-title {
+  margin-left: 20px;
+}
+
+#events {
+  margin-left: 20px;
 }
