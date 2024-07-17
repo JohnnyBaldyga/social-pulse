@@ -35,6 +35,7 @@ h6 {
 body {
     background-color: var(--background);
     font-size: 1.75rem;
+    color: var(--dark-text);
 }
 
 header {
@@ -59,3 +60,4 @@ a:link {
 a:visited {
  color: var(--dark-text);
 }
+
