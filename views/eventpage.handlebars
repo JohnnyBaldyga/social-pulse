@@ -13,4 +13,13 @@
 
 <div class="event-list">
   <h2>Events</h2>
+  <ul id="events">
+    {{each events}}
+      <li class="box">
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+        <p>Date: {{formatDate event_date}}</p>
+        <p>Location: {{location}}</p>
+      </li>
+  </ul>
 </div>
