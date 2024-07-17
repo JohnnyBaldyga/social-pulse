@@ -10,11 +10,12 @@
 /* Root Colors */
 
 :root {
-    --primary: #a2d49f; 
-    --secondary: #f26247;
-    --background: #ffeeb0;
-    --light-text: #ffeeb0;
-    --dark-text: #e72042;
+    --header: #D1DBBD;
+    --background: #ffffff;
+    --light-text: #D1DBBD;
+    --dark-text: #91AA9D;
+    --button: #91AA9D;
+
 }
 
 
@@ -37,11 +38,23 @@ body {
 }
 
 header {
-background-color: var(--primary);
+background-color: var(--header);
 color: var(--dark-text)
 }
 
 footer {
- background-color: var(--secondary);
+ background-color: var(--header);
+ color: var(--dark-text);
+}
+
+.buttons {
+background-color: var(--button) ;
+color: var(--light-text);
+}
+
+a:link {
  color: var(--light-text);
+}
+a:visited {
+ color: var(--dark-text);
 }
