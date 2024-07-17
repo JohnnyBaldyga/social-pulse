@@ -15,7 +15,8 @@ router.get("/", withAuth, async (req, res) => {
       ],
     });
     const events = eventData.map((event) => event.get({ plain: true }));
-    res.render("event", {
+    console.log(events);
+    res.render("eventpage", {
       events,
       logged_in: req.session.logged_in,
     });
@@ -46,7 +47,7 @@ router.get("events/:id", withAuth, async (req, res) => {
       return;
     }
     const event = eventData.get({ plain: true });
-    res.render("event", {
+    res.render("eventpage", {
       ...event,
       logged_in: req.session.logged_in,
     });

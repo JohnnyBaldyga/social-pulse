@@ -4,17 +4,22 @@
     <div class="field">
       <label class="label" for="location">Location</label>
       <div class="control">
-        <input class="input" type="text" id="location" name="location" placeholder="Enter location">
+        <input
+          class="input"
+          type="text"
+          id="location"
+          name="location"
+          placeholder="Enter location"
+        />
       </div>
     </div>
   </form>
 </div>
 
-
 <div class="event-list">
   <h2>Events</h2>
   <ul id="events">
-    {{each events}}
+    {{#each events}}
       <li class="box">
         <h3>{{name}}</h3>
         <p>{{description}}</p>

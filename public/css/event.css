@@ -48,6 +48,10 @@ footer {
 .buttons {
   background-color: var(--button);
   color: var(--light-text);
+  border: none;
+  border-radius: 6px;
+  margin: 20px;
+  margin-bottom: 60px;
 }
 
 a:link {
@@ -55,4 +59,11 @@ a:link {
 }
 a:visited {
   color: var(--dark-text);
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+margin-left: 20px;
+margin-right: 20px;
 }
