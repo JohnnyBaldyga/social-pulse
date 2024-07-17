@@ -43,7 +43,7 @@ router.get('/login', (req, res) => {
         logged_in: req.session.logged_in,
       })
     }
-    catch {
+    catch (err) {
       res.status(500).json(err);
     }
   })
