@@ -19,15 +19,15 @@
       <a href="/">Home</a>
       {{#if logged_in}}
         <button id="logout" class="btn-no-style">Logout</button>
-        {{!-- link to event page --}}
-        <a href="/events">Events</a>
+        {{! link to event page }}
+        <a href="/api/events">Events</a>
       {{else}}
         <a href="/login">Login</a>
       {{/if}}
     </nav>
     <main>
-       
-        {{{body}}}
+
+      {{{body}}}
     </main>
     {{#if logged_in}}
       <script src="/js/logout.js"></script>

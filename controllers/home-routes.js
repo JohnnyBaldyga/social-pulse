@@ -20,32 +20,31 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
-    // if (req.session.logged_in) {
-    //   res.redirect('/');
-    //   return;
-    // }
-  
-    res.render('login-view');
-  });
+router.get("/login", (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
 
-  router.get('/events', async(req, res) =>{
-    if (!req.session.logged_in) {
-      res.redirect('/login');
-      return;
-    }
-    else try {
+  res.render("login-view");
+});
+
+router.get("/events", async (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  } else
+    try {
       const eventData = await Event.findAll();
       const events = eventData.map((event) => event.get({ plain: true }));
 
-      res.render('eventpage', {
+      res.render("eventpage", {
         events,
         logged_in: req.session.logged_in,
-      })
-    }
-    catch (err) {
+      });
+    } catch (err) {
       res.status(500).json(err);
     }
-  })
-  
-  module.exports = router;
+});
+
+module.exports = router;
