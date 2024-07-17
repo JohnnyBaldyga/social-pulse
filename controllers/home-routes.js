@@ -39,7 +39,12 @@ router.get('/login', (req, res) => {
       const events = eventData.map((event) => event.get({ plain: true }));
 
       res.render('eventpage', {
+        events,
+        logged_in: req.session.logged_in,
       })
+    }
+    catch {
+      res.status(500).json(err);
     }
   })
   
