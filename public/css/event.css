@@ -47,6 +47,10 @@ footer {
 .buttons {
   background-color: var(--button);
   color: var(--light-text);
+  border: none;
+  border-radius: 6px;
+  margin: 20px;
+  margin-bottom: 60px;
 }
 
 a:link {
