@@ -1,6 +1,6 @@
 // Post event handler
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("");
+  const form = document.getElementById("post-event-form");
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch("", {
+      const response = await fetch("/api/events", {
         method: "POST",
         body: formData,
       });
@@ -24,4 +24,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-//    Search form handler
