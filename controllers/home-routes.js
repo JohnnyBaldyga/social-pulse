@@ -28,5 +28,24 @@ router.get('/login', (req, res) => {
   
     res.render('login-view');
   });
+
+  router.get('/events', async(req, res) =>{
+    if (!req.session.logged_in) {
+      res.redirect('/login');
+      return;
+    }
+    else try {
+      const eventData = await Event.findAll();
+      const events = eventData.map((event) => event.get({ plain: true }));
+
+      res.render('eventpage', {
+        events,
+        logged_in: req.session.logged_in,
+      })
+    }
+    catch {
+      res.status(500).json(err);
+    }
+  })
   
   module.exports = router;
