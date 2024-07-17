@@ -1,21 +1,20 @@
 /* Global Stylings */
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-
 
 /* Root Colors */
 
 :root {
-    --primary: #D2E2EC;
-    --background: #b4deb4;
-    --light-text: #ffffff;
-    --dark-text: #000000;
+  --header: #d1dbbd;
+  --background: #ffffff;
+  --light-text: #d1dbbd;
+  --dark-text: #91aa9d;
+  --button: #91aa9d;
 }
-
 
 /* Font Styles */
 
@@ -25,22 +24,34 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: var(--dark-text);
-    font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--dark-text);
+  font-weight: 500;
 }
 
 body {
-    background-color: var(--background);
-    font-size: 1.75rem;
+  background-color: var(--background);
+  font-size: 1.75rem;
 }
 
 header {
-background-color: var(--primary);
-color: var(--dark-text)
+  background-color: var(--header);
+  color: var(--dark-text);
 }
 
 footer {
- background-color: var(--secondary);
- color: var(--light-text);
+  background-color: var(--header);
+  color: var(--dark-text);
+}
+
+.buttons {
+  background-color: var(--button);
+  color: var(--light-text);
+}
+
+a:link {
+  color: var(--light-text);
+}
+a:visited {
+  color: var(--dark-text);
 }
