@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../models");
+const { User, Event } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -30,10 +30,11 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/events", async (req, res) => {
+  console.log(req.query.location);
   if (!req.session.logged_in) {
     res.redirect("/login");
     return;
-  } else
+  }
     try {
       const eventData = await Event.findAll();
       const events = eventData.map((event) => event.get({ plain: true }));
@@ -43,6 +44,7 @@ router.get("/events", async (req, res) => {
         logged_in: req.session.logged_in,
       });
     } catch (err) {
+      console.log(err);
       res.status(500).json(err);
     }
 });

@@ -1,8 +1,8 @@
 
-const newFormHandler = async (event) => {
+const newSearchHandler = async (event) => {
   event.preventDefault();
 
-  const search = document.querySelector('#search-form').value.trim();
+  const search = document.querySelector('#search-form');
   const location = document.querySelector('#location').value.trim();
   const eventsList = document.querySelector('#event-list').value.trim();
 
@@ -16,7 +16,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('api/event');
+      document.location.replace('/events');
     } else {
       alert('Failed to search event');
     }
@@ -30,5 +30,20 @@ const delButtonHandler = async (event) => {
       method: 'DELETE',
     });
 
+    if (response.ok) {
+      document.location.replace('/api');
+    } else {
+      alert('Failed to delete event');
+    }
+  }
+};
+
+document
+  .querySelector('.new-search-form')
+  .addEventListener('submit', newSearchHandler);
+
+document
+  .querySelector('.event-list')
+  .addEventListener('click', delButtonHandler);
 
 
