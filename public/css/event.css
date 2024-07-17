@@ -37,6 +37,7 @@ body {
 header {
   background-color: var(--header);
   color: var(--dark-text);
+  padding: 20px;
 }
 
 footer {
