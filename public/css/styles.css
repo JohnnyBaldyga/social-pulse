@@ -1,23 +1,20 @@
 /* Global Stylings */
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-
 
 /* Root Colors */
 
 :root {
-    --header: #D1DBBD;
-    --background: #ffffff;
-    --light-text: #D1DBBD;
-    --dark-text: #91AA9D;
-    --button: #91AA9D;
-
+  --header: #d1dbbd;
+  --background: #ffffff;
+  --light-text: #d1dbbd;
+  --dark-text: #91aa9d;
+  --button: #91aa9d;
 }
-
 
 /* Font Styles */
 
@@ -27,45 +24,44 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: var(--dark-text);
-    font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--dark-text);
+  font-weight: 500;
 }
 
 body {
-    background-color: var(--background);
-    font-size: 1.75rem;
-    color: var(--dark-text);
+  background-color: var(--background);
+  font-size: 1.75rem;
+  color: var(--dark-text);
 }
 
 header {
-background-color: var(--header);
-color: var(--dark-text);
-padding: 20px;
-text-align: center;
+  background-color: var(--header);
+  color: var(--dark-text);
+  padding: 20px;
+  text-align: center;
 }
 
 footer {
- background-color: var(--header);
- color: var(--dark-text);
+  background-color: var(--header);
+  color: var(--dark-text);
 }
 
 .buttons {
-background-color: var(--button) ;
-color: var(--light-text);
-border: none;
-border-radius: 6px;
-margin: 20px;
-margin-bottom: 60px;
+  background-color: var(--button);
+  color: var(--light-text);
+  border: none;
+  border-radius: 6px;
+  margin: 20px;
+  margin-bottom: 60px;
 }
 
 a:link {
- color: var(--light-text);
+  color: var(--light-text);
 }
 a:visited {
- color: var(--dark-text);
+  color: var(--dark-text);
 }
-
 
 /* #header-container {
     display: flex;
@@ -75,77 +71,101 @@ a:visited {
 } */
 
 p {
-    font-family: sans-serif;
-    color: var(--dark-text);
+  font-family: sans-serif;
+  color: var(--dark-text);
 }
 
 #login-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
 }
 
 #signup-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 20px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
 }
 
 #login-label {
-text-align: center;
+  text-align: center;
 }
 
 #signup-label {
-text-align: center;
+  text-align: center;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #homepage-title {
-    color: var(--dark-text);
-    text-align: center;
+  color: var(--dark-text);
+  text-align: center;
 }
 
 li {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 .input {
-    margin-left: 20px;
-    background-color: var(--header);
-    width: 20%;
-color: var(--dark-text);
+  margin-left: 20px;
+  background-color: var(--header);
+  width: 20%;
+  color: var(--dark-text);
 }
 
-.textarea{
-    color: var(--dark-text);
+.textarea {
+  color: var(--dark-text);
 }
 
 #search-location {
-    margin-left:20px;
+  margin-left: 20px;
 }
 
 #location-title {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
-.events-list{
-    margin-left:20px;
+.events-list {
+  margin-left: 20px;
 }
 
 #events-title {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 #events {
-    margin-left: 20px;
+  margin-left: 20px;
+}
+@media screen and (min-width: 390px) {
+  .box {
+    min-width: 350px;
+  }
+  .input {
+    min-width: 350px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .box {
+    min-width: 500px;
+  }
+  .input {
+    min-width: 500px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .box {
+    min-width: 1160px;
+  }
+  .input {
+    min-width: 1160px;
+  }
 }
