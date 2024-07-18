@@ -149,3 +149,28 @@ color: var(--dark-text);
 #events {
   margin-left: 20px;
 }
+
+@media screen and (min-width: 390px) {
+  .box {
+    min-width: 350px;
+  }
+  .input {
+    min-width: 350px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .box {
+    min-width: 500px;
+  }
+  .input {
+    min-width: 500px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .box {
+    min-width: 1160px;
+  }
+  .input {
+    min-width: 1160px;
+  }
+}
